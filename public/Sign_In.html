@@ -15,29 +15,31 @@
         <h1>ESTHER GATE</h1>
     </header>
        
-        <div class="Form">
-            <form id="form-id">
-                <h2>Sign-In</h2>
+    <div class="Form">
+        <form id="form-id">
+            <h2>Sign-In</h2>
+            <br>
+            <input type="text" placeholder="Username or Email" id="username-email-inpt">
+            <br>
+            <input type="password" placeholder="password" id="password-inpt">
+            <br>
+            <div id="captcha-box">
+                <img src="" alt="captcha" id="captcha-img" class="captcha-img">
                 <br>
-                <input type="text" placeholder="Username or Email" id="username-email-inpt">
-                <br>
-                <input type="password" placeholder="password" id="password-inpt">
-                <br>
-                <img src="" alt="captcha">
-                <br>
-                <input class="captcha-input" type="text" placeholder="captcha" id="captcha-inpt">
-                <button type="reset" onclick="" class="captcha-btn">
-                    <img src="/assets/reload-icon.png" alt="icon"  class="reload-icon" >
-                </button>
-                <br>
-                <button type="submit" class="form-btn">Submit</button>
-                <h4 class="form-text">------or------</h4>
-                <button type="button" class="form-btn" onclick="window.location.href='/Auth/Sign_Up';" >Sign-Up</button>
-                <p id="msg-id" class="msg-para"></p>
+                <div class="captcha-controls">
+                    <input class="captcha-input" type="text" placeholder="captcha" id="captcha-inpt" autocomplete="off">
+                    <button type="button" id="reload-captcha-btn" class="captcha-btn">
+                        <img src="/assets/reload-icon.png" alt="icon" class="reload-icon">
+                    </button>
+                </div>
+            </div>
+            <button type="submit" class="form-btn">Submit</button>
+            <h4 class="form-text">------or------</h4>
+            <button type="button" class="form-btn" onclick="window.location.href='/Auth/Sign_Up';">Sign-Up</button>
+            <p id="msg-id" class="msg-para"></p>
+        </form> 
+    </div>
 
-            </form> 
-        </div>
-
-        <script src="/Sign_In.js"></script>
+    <script src="/Sign_In.js"></script>
 </body>
 </html>
